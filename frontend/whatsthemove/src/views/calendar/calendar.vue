@@ -13,7 +13,7 @@
         <v-btn icon>
           <v-icon>mdi-menu</v-icon>
         </v-btn>
-        <h3 class="title font-weight-light text-xs-center grow">Whats the Move?!</h3>
+        <h3 class="title font-weight-light text-xs-center grow">What's the Move?!</h3>
         <v-avatar>
           <v-img src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"></v-img>
         </v-avatar>
@@ -45,11 +45,11 @@
         >
           <v-layout pt-3>
             <v-flex xs3>
-              <strong>5-8pm</strong>
+              <strong>2-9pm</strong>
             </v-flex>
             <v-flex>
-              <strong>Brickhouse Tavern</strong>
-              <div class="caption">1/2 off Pitchers</div>
+              <strong>Finnegans Cove</strong>
+              <div class="caption">$4 Rail Drinks</div>
             </v-flex>
           </v-layout>
         </v-timeline-item>
@@ -60,11 +60,11 @@
         >
           <v-layout wrap pt-3>
             <v-flex xs3>
-              <strong>2-9pm</strong>
+              <strong>5-8pm</strong>
             </v-flex>
             <v-flex>
-              <strong>Finnegans Cove</strong>
-              <div class="caption mb-2">$4 Rail Drinks</div>
+              <strong>Brickhouse Tavern</strong>
+              <div class="caption mb-2">1/2 off Pitchers</div>
             </v-flex>
           </v-layout>
         </v-timeline-item>

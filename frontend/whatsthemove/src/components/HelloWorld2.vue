@@ -42,7 +42,7 @@
               </v-flex>
             </v-layout>
 
-            <v-date-picker v-model="picker" @change="goToCalendar"></v-date-picker>
+            <v-date-picker color="primary" v-model="picker" @change="goToCalendar"></v-date-picker>
           </div>
 
 </template>
