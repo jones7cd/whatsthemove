@@ -15,11 +15,11 @@
 
       <v-flex mb-4>
         <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Whats the move!
+          Welcome to What's The Move!
         </h1>
         <p class="subheading font-weight-regular">
-          Cant figure out what you want to do tonight?
-          <br>Whats the move?!
+          Don't know where to go....
+          <br>What's The Move?! Now you know!
           <a href="" target="_blank"></a>
         </p>
       </v-flex>
