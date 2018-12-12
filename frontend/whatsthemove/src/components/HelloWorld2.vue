@@ -42,7 +42,7 @@
               </v-flex>
             </v-layout>
 
-            <v-date-picker v-model="picker" :landscape="landscape" :reactive="reactive"></v-date-picker>
+            <v-date-picker v-model="picker" @change="goToCalendar"></v-date-picker>
           </div>
 
 </template>
@@ -56,7 +56,7 @@
       >
         
 
-        <v-layout justify-center>
+        <!-- <v-layout justify-center>
           <a
             v-for="(link, i) in importantLinks"
             :key="i"
@@ -66,7 +66,7 @@
           >
             {{ link.text }}
           </a>
-        </v-layout>
+        </v-layout> -->
       </v-flex>
 
       <v-flex
@@ -75,7 +75,7 @@
       >
         
 
-        <v-layout justify-center>
+        <!-- <v-layout justify-center>
           <a
             v-for="(eco, i) in ecosystem"
             :key="i"
@@ -85,7 +85,7 @@
           >
             {{ eco.text }}
           </a>
-        </v-layout>
+        </v-layout> -->
       </v-flex>
     </v-layout>
   </v-container>
@@ -99,6 +99,11 @@
         picker: new Date().toISOString().substr(0, 10),
         landscape: false,
         reactive: false
+      }
+    },
+    methods: {
+      goToCalendar() {
+        this.$router.push({name: "calendar", params: {date: this.picker}});
       }
     }
   }
