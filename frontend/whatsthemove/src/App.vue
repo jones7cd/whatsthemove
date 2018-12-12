@@ -1,39 +1,60 @@
 <template>
   <v-app>
-    <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>BarHop - </span>
-        <span class="font-weight-light">WhatsTheMove?</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>open_in_new</v-icon>
-      </v-btn>
+    <v-navigation-drawer
+      app
+      clipped
+      persistent
+      :mini-variant="miniVariant"
+      v-model="drawer"
+    >
+      <v-list>
+        <v-list-tile 
+          v-for="(route, i) in routes.filter(r => r.meta && r.meta.icon)" 
+          :key="i" 
+          :to="route.path"
+        >
+          <v-list-tile-action>
+            <v-icon v-html="route.meta.icon"></v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title class="text-capitalize">{{ route.name }}</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+          <v-btn icon @click.stop="miniVariant = !miniVariant">
+            <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
+          </v-btn>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-toolbar app clipped-left class="primary white--text">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title class="headline text-uppercase" v-text="title"></v-toolbar-title>
     </v-toolbar>
 
     <v-content>
-      <HelloWorld/>
+      <router-view/>
     </v-content>
+    <v-footer app fixed inset>
+      <span>&copy; 2018 Christopher D. Jones, All rights reserved.</span>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  },
   data () {
     return {
-      //
+      drawer: false,
+      routes: this.$router.options.routes,
+      miniVariant: false,
+      title: "Whats The Move?"
     }
+  },
+  mounted(){
+    console.log(this.$router.options.routes);
   }
 }
 </script>
