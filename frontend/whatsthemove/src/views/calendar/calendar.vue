@@ -25,10 +25,10 @@
       >
         <v-container fill-height>
           <v-layout align-center>
-            <strong class="display-4 font-weight-regular mr-4">14</strong>
+            <strong class="display-4 font-weight-regular mr-4">{{ format(date, 'D') }}</strong>
             <v-layout column justify-end>
-              <div class="headline font-weight-light">Friday</div>
-              <div class="text-uppercase font-weight-light">December 2018</div>
+              <div class="headline font-weight-light">{{ format(date, 'dddd') }}</div>
+              <div class="text-uppercase font-weight-light">{{ format(date, 'MMMM YYYY') }}</div>
             </v-layout>
           </v-layout>
         </v-container>
@@ -102,3 +102,20 @@
     </v-card-text>
   </v-card>
 </template>
+
+<script>
+import { format } from "date-fns";
+export default {
+  data: () => ({
+    date: null
+  }),
+  methods: {
+    format: format
+  },
+  mounted() {
+    let d = this.$route.params.date.split("-");
+    this.date = new Date(+d[0], +d[1] - 1, +d[2]);
+    console.log(this.$route.params, this.date);
+  }
+};
+</script>
