@@ -11,17 +11,17 @@
 
       <v-card-title class="pa-2 red">
         <v-btn icon>
-          <v-icon>mdi-menu</v-icon>
+          <v-icon>chevron_left</v-icon>
         </v-btn>
-        <h3 class="title font-weight-light text-xs-center grow">What's the Move?!</h3>
-        <v-avatar>
-          <v-img src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"></v-img>
-        </v-avatar>
+        <h3 class="title font-weight-light text-xs-center grow">Calendar</h3>
+        <v-btn icon>
+          <v-icon>chevron_right</v-icon>
+        </v-btn>
       </v-card-title>
       <v-img
         src="https://cdn.vuetifyjs.com/images/cards/forest.jpg"
         gradient="to top, rgba(0,0,0,.44), rgba(0,0,0,.44)"
-        height="400"
+        height="200"
       >
         <v-container fill-height>
           <v-layout align-center>
@@ -45,11 +45,11 @@
         >
           <v-layout pt-3>
             <v-flex xs3>
-              <strong>2-9pm</strong>
+              <strong>5-8pm</strong>
             </v-flex>
             <v-flex>
-              <strong>Finnegans Cove</strong>
-              <div class="caption">$4 Rail Drinks</div>
+              <strong>Brickhouse Tavern</strong>
+              <div class="caption">1/2 off Pitchers</div>
             </v-flex>
           </v-layout>
         </v-timeline-item>
@@ -60,10 +60,14 @@
         >
           <v-layout wrap pt-3>
             <v-flex xs3>
-              <strong>5-8pm</strong>
+              <strong>2-9pm</strong>
             </v-flex>
             <v-flex>
+<<<<<<< HEAD
               <strong>Brickhouse Tavern</strong>
+=======
+              <strong>Finnegans Cove</strong>
+>>>>>>> de624ec090cb5f54bac376069a1b0f847240bc45
               <div class="caption mb-2">$4 Rail Drinks</div>
             </v-flex>
           </v-layout>
@@ -117,5 +121,5 @@ export default {
     this.date = new Date(+d[0], +d[1] - 1, +d[2]);
     console.log(this.$route.params, this.date);
   }
-}
+};
 </script>
