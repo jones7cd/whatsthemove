@@ -48,7 +48,7 @@
               <strong>5-8pm</strong>
             </v-flex>
             <v-flex>
-              <strong>Brickhouse Tavern</strong>
+              <strong>Finnegans Cove</strong>
               <div class="caption">1/2 off Pitchers</div>
             </v-flex>
           </v-layout>
@@ -63,11 +63,7 @@
               <strong>2-9pm</strong>
             </v-flex>
             <v-flex>
-<<<<<<< HEAD
               <strong>Brickhouse Tavern</strong>
-=======
-              <strong>Finnegans Cove</strong>
->>>>>>> de624ec090cb5f54bac376069a1b0f847240bc45
               <div class="caption mb-2">$4 Rail Drinks</div>
             </v-flex>
           </v-layout>
