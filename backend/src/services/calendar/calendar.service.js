@@ -1,7 +1,7 @@
 // Initializes the `courses` service on path `/courses`
 const createService = require('feathers-knex');
-const createModel = require('../../models/calendar.model');
-const hooks = require('./calendar.hooks');
+const createModel = require('../../models/courses.model');
+const hooks = require('./courses.hooks');
 
 module.exports = function (app) {
   const Model = createModel(app);
