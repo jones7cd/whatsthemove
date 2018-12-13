@@ -21,7 +21,7 @@
       <v-img
         src="https://cdn.vuetifyjs.com/images/cards/forest.jpg"
         gradient="to top, rgba(0,0,0,.44), rgba(0,0,0,.44)"
-        height="400"
+        height="200"
       >
         <v-container fill-height>
           <v-layout align-center>
