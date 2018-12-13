@@ -64,7 +64,7 @@
             </v-flex>
             <v-flex>
               <strong>Brickhouse Tavern</strong>
-              <div class="caption mb-2">1/2 off Pitchers</div>
+              <div class="caption mb-2">$4 Rail Drinks</div>
             </v-flex>
           </v-layout>
         </v-timeline-item>
