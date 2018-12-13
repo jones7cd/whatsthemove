@@ -11,12 +11,12 @@
 
       <v-card-title class="pa-2 red">
         <v-btn icon>
-          <v-icon>mdi-menu</v-icon>
+          <v-icon>chevron_left</v-icon>
         </v-btn>
-        <h3 class="title font-weight-light text-xs-center grow">What's the Move?!</h3>
-        <v-avatar>
-          <v-img src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"></v-img>
-        </v-avatar>
+        <h3 class="title font-weight-light text-xs-center grow">Calendar</h3>
+        <v-btn icon>
+          <v-icon>chevron_right</v-icon>
+        </v-btn>
       </v-card-title>
       <v-img
         src="https://cdn.vuetifyjs.com/images/cards/forest.jpg"
@@ -25,10 +25,10 @@
       >
         <v-container fill-height>
           <v-layout align-center>
-            <strong class="display-4 font-weight-regular mr-4">{{ format(date, 'D') }}</strong>
+            <strong class="display-4 font-weight-regular mr-4">14</strong>
             <v-layout column justify-end>
-              <div class="headline font-weight-light">{{ format(date, 'dddd') }}</div>
-              <div class="text-uppercase font-weight-light">{{ format(date, 'MMMM YYYY') }}</div>
+              <div class="headline font-weight-light">Friday</div>
+              <div class="text-uppercase font-weight-light">December 2018</div>
             </v-layout>
           </v-layout>
         </v-container>
@@ -45,11 +45,11 @@
         >
           <v-layout pt-3>
             <v-flex xs3>
-              <strong>2-9pm</strong>
+              <strong>5-8pm</strong>
             </v-flex>
             <v-flex>
-              <strong>Finnegans Cove</strong>
-              <div class="caption">$4 Rail Drinks</div>
+              <strong>Brickhouse Tavern</strong>
+              <div class="caption">1/2 off Pitchers</div>
             </v-flex>
           </v-layout>
         </v-timeline-item>
@@ -60,11 +60,11 @@
         >
           <v-layout wrap pt-3>
             <v-flex xs3>
-              <strong>5-8pm</strong>
+              <strong>2-9pm</strong>
             </v-flex>
             <v-flex>
-              <strong>Brickhouse Tavern</strong>
-              <div class="caption mb-2">1/2 off Pitchers</div>
+              <strong>Finnegans Cove</strong>
+              <div class="caption mb-2">$4 Rail Drinks</div>
             </v-flex>
           </v-layout>
         </v-timeline-item>
@@ -102,20 +102,3 @@
     </v-card-text>
   </v-card>
 </template>
-
-<script>
-import { format } from "date-fns";
-export default {
-  data: () => ({
-    date: null
-  }),
-  methods: {
-    format: format
-  },
-  mounted() {
-    let d = this.$route.params.date.split("-");
-    this.date = new Date(+d[0], +d[1] - 1, +d[2]);
-    console.log(this.$route.params, this.date);
-  }
-}
-</script>
